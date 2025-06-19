@@ -4,6 +4,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { Employee } from './employees/employee.entity';
 import { CommitmentLevel } from './commitment-levels/commitment-level.entity';
 import { CommitmentHistory } from './commitment-history/commitment-history.entity';
+import { EmployeesModule } from './employees/employees.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { CommitmentHistory } from './commitment-history/commitment-history.entit
       }),
     }),
     TypeOrmModule.forFeature([Employee, CommitmentLevel, CommitmentHistory]),
+    EmployeesModule,
     // Import các module khác ở đây
   ],
 })

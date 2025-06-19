@@ -1,4 +1,4 @@
-vversion: '3.8'
+version: '3.8'
 services:
   db:
     image: postgres:15
@@ -15,7 +15,7 @@ services:
     build: .
     command: npm run start:dev
     volumes:
-      - .:/usr/src/app
+      - .:/app
     ports:
       - "3000:3000"
     environment:
